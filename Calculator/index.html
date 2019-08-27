@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+      crossorigin="anonymous"></script>
+   <title>Document</title>
+</head>
+
+<body>
+   <div class="container-fluid cont">
+      <div class="row dark window-resize">
+         <div class="col-2 justify-content-start col-md-2 text">Calculator</div>
+         <div class="col-6 offset-4 col-md-2 offset-md-8 dark window-resize-wrap">
+            <ul class="list">
+               <li><i class="far fa-window-minimize minimize"></i></li>
+               <li><i class="far fa-window-restore restore"></i></li>
+               <li><i class="far fa-window-close" id="close"></i></li>
+            </ul>
+         </div>
+      </div>
+      <div class="resize-wrap">
+         <div class="row mb-4 dark">
+            <div class="col-2 col-md-1"><i class="fas fa-bars"></i></div>
+            <div class="col-8 col-md-2">Standard</div>
+            <div class="offset-md-5 col-md-1 d-none s-sm-none d-md-flex justify-content-end text">&nbsp;</div>
+            <div class="col-md-1 d-none d-sm-none d-md-flex justify-content-end text">&nbsp;</div>
+            <div class="col-2 d-flex d-md-none">Memory</div>
+         </div>
+         <div class="row dark  top">
+            <div class="col-md-10">
+               <div class="row mb-3">
+                  <div class="col-md-10 d-none d-sm-none d-md-flex justify-content-end
+                     border border-white screen">0</div>
+                  <div class="col-md-2 d-none d-sm-none d-md-flex text">Memory</div>
+                  <div class="col-12 d-flex d-sm-flex d-md-none justify-content-end
+                     align-items-end screen">0</div>
+               </div>
+               <div class="row dark memory-wrap">
+                  <div class="col-md-4 d-none d-sm-none d-md-flex justify-content-center align-content-start mb-1">
+                     <div class="col-md d-none d-md-flex memory clean">MC</div>
+                     <div class="col-md d-none d-md-flex memory read">MR</div>
+                     <div class="col-md d-none d-md-flex memory add">M+</div>
+                     <div class="col-md d-none d-md-flex memory subtractionMemory">M-</div>
+                     <div class="col-md d-none d-md-flex memory save">MS</div>
+                  </div>
+                  <div class="col-2 d-sm-flex d-md-none memory clean">MC</div>
+                  <div class="col-2 d-sm-flex d-md-none memory read">MR</div>
+                  <div class="col-2 d-sm-flex d-md-none memory add">M+</div>
+                  <div class="col-2 d-sm-flex d-md-none memory subtractionMemory">M-</div>
+                  <div class="col-2 d-sm-flex d-md-none memory save">MS</div>
+                  <div class="col-2 d-sm-flex d-md-none memory">M</div>
+               </div>
+               <div class="calculate-wrap">
+                  <div class="row">
+                     <div class="col-3 col-md-2 border border-white d-flex justify-content-center
+                     align-items-center button buttons percent">%</div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center button clean-entry">CE</div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center
+                     buttons square">&radic;</div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center button clean-values">C</div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center
+                     buttons">x<sup>2</sup></div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center button backspace"><i class="backspace fas fa-backspace"></i></div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center button division">&#247;</div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center
+                        buttons statics"><sup>1</sup>&frasl;<sub>x</sub></div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center button square">&radic;</div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center smaller
+                     buttons">CE</div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center button digit">7</div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center smaller
+                     buttons">C</div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center digit button">8</div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center smaller
+                     buttons"><i class="fas fa-backspace"></i></div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center digit button">9</div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center buttons division">
+                        &#247;
+                     </div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center button multiply">&#215;</div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center button pow-exp-two">x<sup>2</sup></div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center
+                     font-weight-bold bg-white">7</div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center digit button">4</div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center
+                     font-weight-bold bg-white">8</div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center digit button">5</div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center
+                     font-weight-bold bg-white">9</div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center digit button">6</div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center buttons multiply">
+                        &#215;
+                     </div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center button subtraction">&#8722;</div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center button pow-exp-three">x<sup>3</sup></div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center
+                     font-weight-bold bg-white">4</div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center digit button">1</div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center
+                     font-weight-bold bg-white">5</div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center digit button">2</div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center
+                     font-weight-bold bg-white">6</div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center digit button">3</div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center
+                      buttons subtraction">&#8722;</div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center button addition">+</div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center button statics"><sup>1</sup>&frasl;<sub>x</sub></div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center
+                     font-weight-bold bg-white">1</div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center
+                     font-weight-bold bg-white">2</div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center button plusMinus">&plusmn;</div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center digit button">0</div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center
+                     font-weight-bold bg-white">3</div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center button comma">&#8901;</div>
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center buttons addition">+
+                     </div>
+                     <div class="col-md-2 border border-white d-none d-md-flex justify-content-center
+                     align-items-center button">=</div>
+                  </div>
+                  <div class="row d-md-none">
+                     <div class="col-3 d-flex d-md-none justify-content-center align-items-center buttons plusMinus">
+                        &#177;
+                     </div>
+                     <div class="col-3 d-flex d-md-non justify-content-center align-items-center
+                    font-weight-bold bg-white">0</div>
+                     <div class="col-3 d-flex d-md-non justify-content-center align-items-center buttons comma">&#8901;
+                     </div>
+                     <div class="col-3 d-flex d-md-non justify-content-center align-items-center buttons">=</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <script src="dist/bundle.js"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+
+</body>
+
+</html>

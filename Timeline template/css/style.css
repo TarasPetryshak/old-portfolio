@@ -1,0 +1,171 @@
+
+.dateParagraph {
+    width: 90px;
+    height: 40px;
+    font-size: 1.2vw;
+    border: 0.6vh solid rgb(206, 203, 203);
+    border-radius: 1.4vh;
+    z-index: 2;
+    animation: move 1.5s infinite;
+}
+@keyframes move{
+    0% {
+        transform: scale(1);
+    }
+    12%{
+        transform: scale(1.05)
+    }
+    25%{
+        transform: scale(1.1)
+    }
+    37%{
+        transform: scale(1.05)
+    }
+    50%{
+        transform: scale(1);
+        box-shadow: 0 0 1px #000;
+    }
+    62%{
+        transform: scale(0.95);
+        box-shadow: 0 0 2px #000;
+    }
+    75% {
+        transform: scale(0.9);
+        box-shadow: 0 0 3px #000;
+    }
+    88%{
+        transform: scale(0.95);
+        box-shadow: 0 0 2px #000;
+    }
+    100%{
+        transform: scale(1)
+    }
+}
+.dateParagraph:hover {
+    animation: none;
+    cursor: pointer;
+}
+.wrapTwitterLogo {
+    position: relative;
+}
+.twitterLogo {
+    position: absolute;
+    font-size: 1.7em;
+    right: 4%;
+    top: 45%;
+    z-index: 2;
+}
+.twitterLogoRight {
+    position: absolute;
+    font-size: 1.7em;
+    left: 2.5%;
+    top: 45%;
+    z-index: 2;
+}
+h6+p {
+    position: relative;
+}
+.rightAlign,
+.leftAlign {
+    opacity: 0;
+}
+.rightAlign:hover,
+.leftAlign:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.rightAlign::after,
+.leftAlign::after,
+.centerAlign::after {
+    content: '';
+    display: block;
+    width: 1em;
+    height: 1em;
+    background: #fff;
+    position: absolute;
+    top: 47%;
+    transform: rotate(45deg);
+}
+.rightAlign::after {
+    left: 8px;
+}
+.leftAlign::after {
+    right: 40px;
+}
+.centerAlign::after {
+    top: -0.5em;
+    left: 49.4%;
+}
+.centerAlign {
+    z-index: 2;
+}
+.logo::before {
+    content: url(../img/logomed.png);
+    display: block;
+    transform: unset;
+    position: absolute;
+    top: 25%;
+    left: 5%; 
+    z-index: 2;   
+}
+.wrapper {
+    position: relative;
+}
+.wrapper::after {
+    content: '';
+    display: block;
+    width: 4px;
+    background: #5cb5b8;
+    position: absolute;
+    height: 114%;
+    top: -7.3%;
+    left: 49.75%;
+    z-index: 1;
+}
+.date,
+.dateRight {
+    position: relative;
+}
+.date::after,
+.dateRight::after {
+    content: '';
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: #5cb5b8;
+    border: 3px solid rgb(206, 203, 203);
+    border-radius: 50%;
+    position: absolute;
+    top: 47%;
+    z-index: 2;
+}
+.date::after {
+    left: 98.7%;
+}
+.dateRight::after {
+    left: -7px;
+}
+@media screen and (max-width: 992px) {
+    .logo::before {
+        margin-left: 0.7vw;
+    }
+} 
+@media screen and (max-width: 768px) {
+    .logo::before {
+        margin-left: 1.3vw;
+    }
+    .wrapper::after {
+        height: 110%;
+        top: -6%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .dateParagraph {
+        width: 70px;
+        height: 35px;
+    }
+    .wrapper::after {
+        height: 107%;
+        top: -4%;
+    }
+}
